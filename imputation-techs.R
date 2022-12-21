@@ -5,10 +5,6 @@ dat<- rnorm_multi(n = 500,
                   r = 0.5, 
                   varnames = c("y", "X"),
                   empirical = FALSE)
-#library(missForest)
-#y_mis <- prodNA(data.frame(dat$y), noNA = 0.5) # if you want to get MCAR data
-#data_mar<-cbind(dat$X,y_mis)
-
 library(missMethods)
 data_mar <- delete_MAR_1_to_x(dat,0.5,"y","X",3)# to  generate MAR data
 
@@ -98,3 +94,13 @@ legend("bottomright",
 mean3=mean(data_sto$y)
 sd3=sd(data_sto$y)
 cor3=cor(data_sto$X,data_sto$y)
+
+# Hot Deck imputation
+library(missForest)
+library(mice)
+library(hot.deck)
+y_mis <- prodNA(data.frame(dat$y), noNA = 0.5) # to generate MCAR values
+data_mcar<-cbind(dat$X,y_mis)
+#saveRDS(df,file = "df.rds") #to save the dataset as rds file 
+res <- hot.deck(data_mcar, m = 6, method = "best.cell")
+#saveRDS(res,file = 'HD.rds') # to save the hot deck results 
