@@ -117,6 +117,7 @@ y_mis <- prodNA(data.frame(dat$y), noNA = 0.5) # to generate MCAR values
 data_mcar<-cbind(dat$X,y_mis)
 #saveRDS(df,file = "df.rds") #to save the dataset as rds file 
 res <- hot.deck(data_mcar, m = 6, method = "best.cell")
-res
+#let's look at the 2nd imputed dataset
+res$data[2]
 #saveRDS(res,file = 'HD.rds') # to save the hot deck results 
 ```
