@@ -5,7 +5,7 @@ This was a part of my internship project, we wanted to use the Robust Optimizati
 PS: often when presenting this work to people, they tend to ask (so did you get to fill in the missing values ..) thinking that we did this to impute missing values our incomplete dataset. NO the purpose is to FIND A MODEL (a robust one) that provides us with a safe solution, since it is feasible for every perturbed dataset and optimal for the worst case dataset (and that's why it's called ROBUST actually ^^). Imputation was just a pass through (an important one of course) to figure the set of uncertainties (all the possible imputed values). AND as **Schafer** said "It’s important to highlight that the purpose of Multiple imputation is not to re-create the individual missing values as close as possible to the true ones, but **to handle missing data to achieve valid statistical inference.
 
 # R code for imputation techniques 
-It's a code showing the impact of imputation on the inferece when using different methods, here I'm showing mean imputation, determenistic & stochastic regression imputation. I've published a detailed article about this, you can find it here ==> [Medium profile] (https://medium.com/@hadik.imane)
+It's a code showing the impact of imputation on the inferece when using different methods, here I'm showing mean imputation, determenistic & stochastic regression imputation. I've published a detailed article about this, you can find it here ==> [Medium profile](https://medium.com/@hadik.imane)
 
 
 
