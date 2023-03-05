@@ -1,4 +1,4 @@
-#  python code
+#  Python code
 
 This was a part of my internship project, we wanted to use the Robust Optimization approach when having missing DATA, since RO is used to seek an optimized solution that is resistant to perturbation in data, let's try it to minimize what could worst happen when having pertubation due to missing values .. So what matters is training the model based on RO logic (and the set of uncertainties is related to the method of imputation which was in our case Hot Deck multiple imputation technique), then the model that we used is an ANN. You could use whatever neural network model (based on the problem you have) just take into consideration that few changes would be necessary for the RO training function (& the other training testing functions of couse ^^).. Later on we would compare the maximum loss when using our RO model and the classical model when testing on both imputed/complete dataset.
 
